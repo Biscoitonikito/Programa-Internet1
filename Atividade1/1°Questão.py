@@ -7,22 +7,19 @@ class RequestInformacao:
     def status(self):
         requests.get(self.url).status_code
 
-    def headers():
-        requests.get(self.url)
-        return response.headers
+    def headers(self): 
+        return requests.get(self.url).headers
 
-    def tamanho():
-        requests.get(self.url)
-        return response.headers['content-lenght']
+    def tamanho(self):
+        return requests.get(self.url).headers['content-lenght']
 
-    def corpo():
-        requuests.get(self.url)
-        return response.content
+    def corpo(self):
+        return requests.get(self.url).response.content
 
 if __name__ == '__main__':
     url = input("Digite a url")
     str(url)
     print(RequestInformacao(url).status())
-    print(RequestInformacao(url).self.headers())
+    print(RequestInformacao(url).headers())
     print(RequestInformacao(url).tamanho())
     print(RequestInformacao(url).corpo())
