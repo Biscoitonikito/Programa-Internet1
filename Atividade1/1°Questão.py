@@ -11,13 +11,14 @@ class RequestInformacao:
         return requests.get(self.url).headers
 
     def tamanho(self):
-        return requests.get(self.url).headers['content-lenght']
+        texto = requests.get(self.url).headers
+        return len(texto)
 
     def corpo(self):
-        return requests.get(self.url).response.content
+        return requests.get(self.url).content
 
 if __name__ == '__main__':
-    url = input("Digite a url")
+    url = input("Digite a url: ")
     str(url)
     print(RequestInformacao(url).status())
     print(RequestInformacao(url).headers())
