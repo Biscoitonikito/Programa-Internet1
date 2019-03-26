@@ -19,7 +19,6 @@ class RequestInformacao:
 
 if __name__ == '__main__':
     url = input("Digite a url: ")
-    str(url)
     print(RequestInformacao(url).status())
     print(RequestInformacao(url).headers())
     print(RequestInformacao(url).tamanho())
